@@ -65,7 +65,7 @@ def create_team_comparison_chart(df):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
     # 左側：得点合計の棒グラフ
-    sns.barplot(x='チーム', y='総得点', data=team_df, ax=ax1, palette='viridis')
+    sns.barplot(x='チーム', y='総得点', data=team_df, ax=ax1, palette='viridis', hue='チーム', legend=False)
     ax1.set_title('チーム総得点比較')
     ax1.set_ylabel('総得点')
 
